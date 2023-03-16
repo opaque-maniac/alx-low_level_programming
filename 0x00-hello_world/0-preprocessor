@@ -1,4 +1,2 @@
 #!/bin/bash
-cfile = $CFILE
-gcc -E "$CFILE" -o c
-cat c
+gcc -E $CFILE | tr -d '\n' > c
