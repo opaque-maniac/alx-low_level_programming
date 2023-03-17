@@ -6,26 +6,25 @@
  * Return: 0 when successfull
  */
 
-int main(void)
+int main()
 {
-	int i = 0;
-	int j = 0;
+	int counter = 0;
 
-	for (i = 0; i < 10; i++)
+	for (int i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (int j = 1; j < 10; j++)
 		{
-			putchar(48 + i);
-			putchar(48 + j);
-			if (i != 8 && j != 9)
+			putchar(i);
+			putchar(j);
+			putchar(' ');
+			counter++;
+			if (counter <= 89)
 			{
-				putchar(' ');
 				putchar(',');
 			} else
 			{
 				break;
 			}
-			
 		}
 	}
 	putchar('\n');
