@@ -15,19 +15,17 @@ int main(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (i < 9)
+			putchar(48 + i);
+			putchar(48 + j);
+			if (i != 8 && j != 9)
 			{
-				putchar(48 + i);
-				putchar(48 + j);
-				if (i != 8 && j != 9)
-				{
-					putchar(' ');
-					putchar(',');
-				} else
-				{
-					break;
-				}
+				putchar(' ');
+				putchar(',');
+			} else
+			{
+				break;
 			}
+			
 		}
 	}
 	putchar('\n');
