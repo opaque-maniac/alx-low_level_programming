@@ -1,19 +1,18 @@
 #include <stdio.h>
-
 /**
  * main - this is the main function
- * 
+ *
  * Return: 0 when successfull
-*/
+ */
 
-int main() {
-    char letter = 'a';
+int main(void)
+{
+	char i = 'a';
 
-    while (letter <= 'z')
+	for (i = 'a'; i <= 'z')
 	{
-        putchar(letter);
-        letter++;
-    }
-    putchar('\n');
-    return (0);
+		putchar(i);
+	}
+	putchar('\n');
+	return (0);
 }
