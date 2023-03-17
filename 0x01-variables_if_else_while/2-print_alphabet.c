@@ -2,18 +2,17 @@
 
 /**
  * main - this is the main function
- *
+ * 
  * Return: 0 when successfull
- */
+*/
 
-int main(void)
-{
-	char i = 'a';
+int main() {
+    char letter = 'a';
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		putchar(i);
-	}
-	putchar(" ");
-	return (0);
+    while (letter <= 'z') {
+        putchar(letter);
+        letter++;
+    }
+    putchar('\n');
+    return (0);
 }
