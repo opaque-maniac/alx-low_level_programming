@@ -7,22 +7,32 @@
 
 void times_table(void)
 {
-	int a, b;
+	int x, y, z, u, d;
 
-	for (a = 0; a <= 9; a++)
+	for (x = 0; x <= 9; x++)
 	{
-		for (b = 0; b <= 9; b++)
+		for (y = 0; y <= 9; i++)
 		{
-			_putchar((a * b) + '0');
-			if (b != 9)
+			z = x * y;
+			if (z > 9)
 			{
+				u = z % 10;
+				d = (z - u) / 10;
 				_putchar(44);
 				_putchar(32);
+				_putchar(d + '0');
+				_putchar(u + '0');
 			} else
 			{
-				_putchar(36);
+				if (y != 0)
+				{
+					_putchar(44);
+					_putchar(32);
+					_putchar(32);
+				}
+				_putchar(z + '0');
 			}
 		}
-		_putchar(10);
+		_putchar('\n');
 	}
 }
