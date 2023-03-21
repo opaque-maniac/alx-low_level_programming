@@ -4,7 +4,7 @@
 /**
  * print_to_98 - this is a function that prints to ninety eight
  *
- * @c: this is the starting point
+ * @n: this is the starting point
  *
  * Return: void
  */
