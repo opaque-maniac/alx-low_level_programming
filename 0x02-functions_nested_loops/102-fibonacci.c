@@ -8,14 +8,16 @@
 
 int main(void)
 {
-	int a = 0;
-	int b = 1;
+	int a = 1;
+	int b = 2;
 	int c;
 	int count = 0;
 
 	while (count < 50)
 	{
-		printf("%d, ", a);
+		printf("%d", a);
+		printf(" ");
+		printf(",");
 		c = a + b;
 		a = b;
 		b = c;
