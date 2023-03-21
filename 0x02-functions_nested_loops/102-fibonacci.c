@@ -8,20 +8,25 @@
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int c;
-	int count = 0;
+	int i = 0;
+	long j = 1, k = 2;
 
-	while (count < 50)
+	while (i < 50)
 	{
-		printf("%d", a);
-		printf(" ");
-		printf(",");
-		c = a + b;
-		a = b;
-		b = c;
-		count++;
+		if (i == 0)
+		{
+			printf("%ld", j);
+		} else if (i == 1)
+		{
+			printf(", %ld", k);
+		} else
+		{
+			k += j;
+			j = k - j;
+			printf(", %ld", k);
+		}
+		i++;
 	}
+	printf('\n');
 	return (0);
 }
