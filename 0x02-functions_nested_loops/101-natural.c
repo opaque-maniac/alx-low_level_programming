@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -13,16 +12,12 @@ int main(void)
 
 	for (i = 0; i < 1024; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			total += i;
-		} else if (i % 5 == 0)
-		{
-			total += i;
-		} else if (i % 3 == 0)
+		if (i % 3 == 0 || i % 5 == 0)
 		{
 			total += i;
 		}
+		i++;
 	}
+	printf("%d\n", total);
 	return (0);
 }
