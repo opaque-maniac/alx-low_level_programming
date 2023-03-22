@@ -15,14 +15,7 @@ int main(void)
 
 	while (count < 98)
 	{
-		if (a < 420196140727489673)
-		{
-			printf("%li", a);
-		} else
-		{
-			printf("%li", a);
-			break;
-		}
+		printf("%li", a);
 		temp = a + b;
 		a = b;
 		b = temp;
