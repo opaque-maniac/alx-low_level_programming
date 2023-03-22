@@ -15,7 +15,13 @@ int main(void)
 
 	while (count < 98)
 	{
-		printf("%i", a);
+		if (a < 0)
+		{
+			printf("%i", -a);
+		} else
+		{
+			printf("%i", a);
+		}
 		temp = a + b;
 		a = b;
 		b = temp;
