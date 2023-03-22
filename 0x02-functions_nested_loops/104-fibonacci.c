@@ -9,19 +9,12 @@
 int main(void)
 {
 	int count = 0;
-	unsigned int a = 1;
-	unsigned int b = 2;
-	unsigned int temp;
+	long int a = 1;
+	long int b = 2;
+	long int temp;
 
 	while (count < 98)
-	{
-		if (a < 0)
-		{
-			printf("%i", -a);
-		} else
-		{
-			printf("%i", a);
-		}
+	{	printf("%i", a);
 		temp = a + b;
 		a = b;
 		b = temp;
