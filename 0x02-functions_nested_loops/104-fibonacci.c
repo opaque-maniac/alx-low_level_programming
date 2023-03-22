@@ -14,7 +14,7 @@ int main(void)
 	long int temp;
 
 	while (count < 98)
-	{	printf("%i", a);
+	{	printf("%li", a);
 		temp = a + b;
 		a = b;
 		b = temp;
