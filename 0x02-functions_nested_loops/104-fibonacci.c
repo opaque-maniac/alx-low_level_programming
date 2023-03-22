@@ -3,22 +3,30 @@
 /**
  * main - this is the main function
  *
- * Return:0 when successfull
+ * Return: 0 when successfull
  */
 
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
-	unsigned long half1, half2;
+	int count = 0;
+	unsigned int a = 1;
+	unsigned int b = 2;
+	unsigned int temp;
 
-	for (count = 0; count < 92; count++)
+	while (count < 98)
 	{
-	sum = fib1 + fib2;
-	printf("%lu, ", sum);
-	fib1 = fib2;
-	fib2 = sum;
+		printf("%i", a);
+		temp = a + b;
+		a = b;
+		b = temp;
+		count++;
+		if (count < 97)
+		{
+			printf(", ");
+		} else
+		{
+			printf("\n");
+		}
 	}
-	return(0);
+	return (0);
 }
