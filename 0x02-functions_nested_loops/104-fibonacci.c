@@ -9,9 +9,9 @@
 int main(void)
 {
 	int count = 0;
-	int a = 1;
-	int b = 2;
-	int temp;
+	unsigned int a = 1;
+	unsigned int b = 2;
+	unsigned int temp;
 
 	while (count < 98)
 	{
