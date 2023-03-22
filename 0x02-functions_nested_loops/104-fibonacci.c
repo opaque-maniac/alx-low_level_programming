@@ -15,7 +15,7 @@ int main(void)
 
 	while (count < 98)
 	{
-		printf("%d", a);
+		printf("%lli", a);
 		temp = a + b;
 		a = b;
 		b = temp;
