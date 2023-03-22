@@ -9,8 +9,8 @@
 int main(void)
 {
 	int count = 0;
-	int i = 1;
-	int j = 2;
+	int a = 1;
+	int b = 2;
 	int temp;
 
 	while (count < 98)
