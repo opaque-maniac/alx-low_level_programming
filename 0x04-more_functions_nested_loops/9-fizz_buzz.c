@@ -1,8 +1,8 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
  * main - this is the main function
- * 
  * Return: 0 when successfull
  */
 
@@ -12,9 +12,9 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if ((i % 3 == 0) && (i % 5 == 0))
 		{
-			printf("Fizz Buzz");
+			printf("FizzBuzz");
 		}
 		else if (i % 3 == 0)
 		{
@@ -26,9 +26,14 @@ int main(void)
 		}
 		else
 		{
-			printf("%i", i);
+			printf("%d", i);
 		}
-		printf(" ");
+
+		if (i != 100)
+		{
+			printf(" ");
+		}
 	}
+	printf("\n");
 	return (0);
 }
