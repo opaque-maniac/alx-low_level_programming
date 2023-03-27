@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * puts2 - test function
@@ -9,16 +10,18 @@
 void puts2(char *str)
 {
 	int i;
-	int j = 9;
+	int len = strlen(str);
 
-	while (str[j] != '\0')
+	for (i = 0; i < len; i+= 2)
 	{
-		j++;
+		if (str[i] == '\0')
+		{
+			break;
+		}
+		else
+		{
+			_putchar(str[i]);
+		}
+		_putchar('\n');
 	}
-
-	for (i = 0; i < j; i += 2)
-	{
-		_putchar(str[i]);
-	}
-	_putchar('\n');
 }
