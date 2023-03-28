@@ -1,27 +1,43 @@
 #include "main.h"
 
 /**
- * _atoi - this is the test function
- * @s: string to convert
- * Return: integer value of string
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ * Return: integers in a string
  */
 
 int _atoi(char *s)
 {
-	int i = 0;
-	int sign = 1;
-	int result = 0;
+	int num, len, numcount, mult, x, neg;
 
-	while (s[i] != '\0')
+	len = 0;
+	x = 0;
+	numcount = 0;
+	mult = 1;
+	neg = 1;
+	num = 0;
+
+	while (s[len] != '\0')
 	{
-		if (s[i] == '-')
-			sign *= -1;
-		if (s[i] >= '0' && s[i] <= '9')
-			result = result * 10 + (s[i] - '0');
-		if (result != 0 && (s[i] < '0' || s[i] > '9'))
-			break;
-		i++;
+		if (s[len] >= '0' && s[len] <= '9')
+		{
+			numcount++;
+			if (!(s[len + 1] >= '0' && s[len + 1] <= '9'))
+				break;
+		}
+		len++;
 	}
-
-	return (result * sign);
+	for (; numcount > 1; numcount--)
+		mult *= 10;
+	for (; x <= len; x++)
+	{
+		if (s[x] == '-')
+			neg *= -1;
+		else if (s[x] <= '9' && s[x] >= '0')
+		{
+			num += (s[x] - '0') * mult * neg;
+			mult /= 10;
+		}
+	}
+	return (num);
 }
