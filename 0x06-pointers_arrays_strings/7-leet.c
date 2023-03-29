@@ -8,17 +8,23 @@
 
 char *leet(char *s)
 {
-	int i;
-	int j;
 	char letters[] = "aAeEoOtTlL";
 	char numbers[] = "44337071";
+	int i;
+	int j;
 
 	for (i = 0; s[i]; i++)
 	{
-		for (j = 0; letters[j]; j++)
+		j = 0;
+
+		while (letters[j])
 		{
 			if (s[i] == letters[j])
+			{
 				s[i] = numbers[j];
+				break;
+			}
+			j++;
 		}
 	}
 
