@@ -1,1 +1,1 @@
-This is a folder containing code for pointer functions
+This is a folder containing code for function pointers
